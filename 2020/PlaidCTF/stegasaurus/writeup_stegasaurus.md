@@ -134,3 +134,4 @@ In some cases it work quite right, probably due staring somewhere inside group o
 ```
  There are probably multiple ways of doing this. I did this by counting prefix sum, +1 for each 1, -1 for 0. Position with lowest value was chosen as starting offset.
 
+I previously wrote that backtracking on small cases didn't give any obvious patterns. Now that I have solved the task I remember that rotation pattern was visible in the solution found by backtracking, but I decided to ignore it thinking that it only works with `N=6, K=2` and doing it with bigger sizes would produce overlap.
