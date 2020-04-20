@@ -39,6 +39,7 @@ I initially implemented both Alice and Bob using next_permutation function. It t
 
 Converting permutation to it's number in the lexicographical order is quite easy, especially since the number of card is small so doing it `O(n^2)` is acceptable.
 
+
 ```lua
 FACTORIAL = {1, 2, 6, 24, 120, 720, 5040}
 
@@ -55,6 +56,9 @@ end
 ```
 
 Doing the opposite for Alice is a bit is  a bit more tricky. There are algorithms for this but i didn't want to write and debug one in Lua. So instead i precalculated all permutations of 7 numbers in a global variable using `next_permutation` which I had already written for my initial slow implementation.
+
+This part is more or less the same task [MMMAGIC6](https://www.spoj.com/problems/MMMAGIC6/) on competitive programming(algorithm and datastructure challanges) site https://spoj.com but with slightly different constants. Supposedly it is also the same as task from [MWPZ](http://mwpz.poznan.pl) 2007 contest in Poland.
+
 
 # Part 2
 
@@ -129,7 +133,4 @@ In some cases it work quite right, probably due staring somewhere inside group o
    pos = (i + offset) % N
 ```
  There are probably multiple ways of doing this. I did this by counting prefix sum, +1 for each 1, -1 for 0. Position with lowest value was chosen as starting offset.
-
-
-
 
